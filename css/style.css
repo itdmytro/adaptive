@@ -64,7 +64,7 @@ table {
 }
 .dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -83,7 +83,7 @@ table {
   }
 .logo-link {
   display: block;
-  margin: 80px 0 80px 0;
+  margin: 80px 0;
 }
 .anchors {
   margin: 0 auto;
@@ -93,7 +93,7 @@ table {
   line-height: 24px;
   color: #005BBB;
   text-decoration: none;
-  margin: 0 40px 80px 40px;
+  margin: 0 40px 80px;
 }
 .nav-item:hover {
   border-bottom: 2px dotted #005BBB;
@@ -101,10 +101,12 @@ table {
 .gallery {
   display: flex;
   justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .photo-block {
   height: 400px;
-  margin: 80px 20px 40px 20px;
+  margin: 80px 20px;
 }
 .glr-img {
   height: 100%;
@@ -127,7 +129,7 @@ table {
   background: none;
   border-radius: 50%;
   border: 2px solid #005BBB;
-  margin: 0 8px 0 8px;
+  margin: 0 8px;
   cursor: pointer;
 }
 .slick-active button {
@@ -139,10 +141,10 @@ table {
   font-size: 28px;
   line-height: 140%;
   color: #005BBB;
-  margin: 80px auto 80px auto;
+  margin: 80px auto;
 }
 .about-text {
-  margin: 30px 0 30px 0;
+  margin: 30px 0;
 }
 .mid-header {
   max-width: 1024px;
@@ -162,11 +164,11 @@ table {
   display: block;
   width: 500px;
   border-top: 1px solid #005BBB;
-  margin: 16px auto 0 auto;
+  margin: 16px auto 0;
 }
 .history-section {
   max-width: 1024px;
-  margin: 40px auto 80px auto;
+  margin: 40px auto 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -190,7 +192,7 @@ table {
 .contact-form {
   max-width: 1024px;
   border: 1px solid #005BBB;
-  margin: 40px auto 160px auto;
+  margin: 40px auto 160px;
   padding: 30px;
   display: flex;
   align-items: center;
@@ -260,7 +262,7 @@ and (max-width: 1199px) {
   .anchors {
     display: none;
     margin: 0;
-    position: absolute;
+    position: fixed;
     top: 228px;
     left: 60px;
     right: 60px;
@@ -281,6 +283,9 @@ and (max-width: 1199px) {
   .menu-open .dropdown,
   .menu-open .anchors {
     display: block;
+  }
+  .menu-open .logo-link {
+    position: fixed;
   }
   .menu-open .logo-link svg * {
     fill: #ffffff;
@@ -358,7 +363,7 @@ and (max-width: 949px) {
   }
   .logo-link {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 24px;
     left: 21px;
     margin: 0;
@@ -369,7 +374,7 @@ and (max-width: 949px) {
   }
   .anchors {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 20px;
     z-index: 2;
@@ -380,9 +385,11 @@ and (max-width: 949px) {
     display: block;
     color: #ffffff;
     margin: 48px 0;
+    text-decoration: underline 1px transparent;
   }
   .nav-item:hover {
-    border-bottom: 1px dotted #ffffff;
+    text-decoration: underline 1px dotted #ffffff;
+    border-bottom: 0;
   }
   .burger {
     display: block;
@@ -446,19 +453,19 @@ and (max-width: 949px) {
     height: 8px;
     padding: 25% 0 0 0;
     border-width: 1px;
-    margin: 0 4px 0 4px;
+    margin: 0 4px;
   }
   .about-block {
     font-size: 16px;
     line-height: 140%;
     padding: 0 20px 0 20px;
-    margin: 48px 0 48px 0;
+    margin: 48px 0;
   }
   .about-text {
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
   }
   .mid-header {
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -467,7 +474,7 @@ and (max-width: 949px) {
   }
   .history-section {
     display: block;
-    margin: 24px 20px 48px 20px;
+    margin: 24px 20px 48px;
   }
   .hist-block {
     margin: 0 0 24px 0;
@@ -484,7 +491,7 @@ and (max-width: 949px) {
   .contact-form {
     max-width: 100%;
     height: 150px;
-    margin: 24px 20px 120px 20px;
+    margin: 24px 20px 120px;
     position: relative;
   }
   .form-txt {
