@@ -195,10 +195,12 @@ table {
   margin: 40px auto 160px;
   padding: 30px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 .form-txt {
   width: 100%;
+  padding: 18px 2px 0;
+  margin-right: 2px;
   border: 0;
   outline: 0;
   color: #005BBB;
@@ -210,6 +212,14 @@ table {
   color: rgba(0, 91, 187, 0.5);
   font-size: 18px;
   line-height: 22px;
+}
+.form-txt::-webkit-scrollbar {
+  width: 5px;
+  border: 1px solid #fff;
+  background-color: #ffffff;
+}
+.form-txt::-webkit-scrollbar-thumb {
+  background-color: #005BBB;
 }
 .form-btn {
   background: #005BBB;
@@ -423,14 +433,15 @@ and (max-width: 949px) {
   .burger-form {
     position: absolute;
     top: 358px;
+    height: 150px;
     border-color: #ffffff;
   }
-  .burger-form input {
+  .burger-form textarea {
     background: none;
     color: #ffffff;
-    margin: 20px;
+    margin: 0;
   }
-  .burger-form input::placeholder {
+  .burger-form textarea::placeholder {
     color: #ffffff;
     opacity: 0.5;
   }
@@ -495,16 +506,10 @@ and (max-width: 949px) {
     position: relative;
   }
   .form-txt {
-    width: 100%;
-    height: 100%;
+    padding: 0;
   }
   .form-txt::placeholder {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: auto;
     text-align: center;
-    top: 0;
   }
   .form-btn {
     position: absolute;
